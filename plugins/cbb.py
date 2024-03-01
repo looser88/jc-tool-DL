@@ -4,7 +4,7 @@ from pyrogram import __version__
 from bot import Bot
 import pytz 
 import time
-from config import OWNER_ID
+from info import OWNER_ID
 from datetime import datetime, timedelta
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
