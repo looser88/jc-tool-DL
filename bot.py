@@ -18,46 +18,46 @@ from datetime import datetime
 from info import API_HASH, APP_ID, TG_BOT_TOKEN, PORT
 
 
-Bot = Client(
-    "my_account",
-    api_id = APP_ID,
-    api_hash = API_HASH,
-    plugins={
-                "root": "plugins"
-            },
-    bot_token = TG_BOT_TOKEN
-    )
-
-# class Bot(Client):
-#     def __init__(self):
-#         super().__init__(
-#             name="Bot",
-#             api_hash=API_HASH,
-#             api_id=APP_ID,
-#             plugins={
+# Bot = Client(
+#     "my_account",
+#     api_id = APP_ID,
+#     api_hash = API_HASH,
+#     plugins={
 #                 "root": "plugins"
 #             },
-#             bot_token=TG_BOT_TOKEN
-#         )
+#     bot_token = TG_BOT_TOKEN
+#     )
 
-#     async def start(self):
-#         super().start()
-#         usr_bot_me = await self.get_me()
-#         self.uptime = datetime.now()
+class Bot(Client):
+    def __init__(self):
+        super().__init__(
+            name="Bot",
+            api_hash=API_HASH,
+            api_id=APP_ID,
+            plugins={
+                "root": "plugins"
+            },
+            bot_token=TG_BOT_TOKEN
+        )
+
+    async def start(self):
+        super().start()
+        usr_bot_me = await self.get_me()
+        self.uptime = datetime.now()
 
        
-#         #web-response
-#         app = web.AppRunner(await web_server())
-#         await app.setup()
-#         bind_address = "0.0.0.0"
-#         await web.TCPSite(app, bind_address, PORT).start()
+        #web-response
+        app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
 
-#     async def stop(self, *args):
-#         await super().stop()
+    async def stop(self, *args):
+        await super().stop()
 
 
 print("I AM ALIVE")
-Bot.run()
+Bot().run()
 
 # Bot = Client(
 #     "my_account",
