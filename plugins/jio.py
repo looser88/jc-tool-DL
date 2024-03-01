@@ -18,13 +18,13 @@ import asyncio
 import base64
 
 
-import base64, requests, sys, base64, json
-from pywidevi.L3.cdm import cdm, deviceconfig
+import base64, requests, sys, xmltodict, json
+from WKSKEYS.pywidevin.L3.cdm import deviceconfig
 from base64 import b64encode
-from pywidevi.L3.getPSSH import get_pssh
-from pywidevi.L3.decrypt.wvdecryptcustom import WvDecrypt
+from WKSKEYS.pywidevin.L3.getPSSH import get_pssh
+from WKSKEYS.pywidevin.L3.decrypt.wvdecryptcustom import WvDecrypt
 import time
-import re 
+import re
 
 
 
