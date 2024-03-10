@@ -5,13 +5,6 @@ import asyncio
 
 
 
-#############reply any massege from a group
-##   (filters.group(coustom chat.id) & filters.text(eg - hi) & filters.incoming)
-@Client.on_message(filters.group & filters.text & filters.incoming)
-async def give_filter(client, message):
-    button = [[InlineKeyboardButton(text="ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ", url=f"https://t.me/alexa_search_bot")]]
-    await message.reply_text("<b>MESSAGE RESIVED</b>", reply_markup=InlineKeyboardMarkup(button))
-
 ############## RUN MULPLE BUTTTUN FROM LIST
 SPELL_IMG ="https://graph.org/file/ead67f78d85f79338bdac.jpg"
 movielist =["A","B","C","D","E","F"]
