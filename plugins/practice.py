@@ -11,7 +11,7 @@ async def give_filter(client, message):
     await message.reply_text("<b>MESSAGE RESIVED</b>", reply_markup=InlineKeyboardMarkup(button))
     
     
-######## reply_markup=ForceReply
+######## reply_markup=ForceReply (NOT SOLVED)
 @Client.on_message(filters.private & filters.command(["create_channel"]))
 async def give_filter(Client, message):
     id = message.reply_to_message_id
